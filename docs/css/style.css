@@ -1,0 +1,86 @@
+body, p {
+    font-family: Times New Roman;
+}
+
+p {
+    margin-left: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Courier;
+    word-spacing: 2px;
+}
+
+div#top-div {
+    background-color: white;
+}
+
+div#list-div {
+    background-color: rgb(243, 161, 131);
+}
+
+div#sign-up-div {
+    background-color: rgb(177, 236, 177);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+th:first-child {
+    width: 120px;
+    text-align: center;
+}
+
+td:nth-child(odd) {
+    text-align: center;
+}
+
+th {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+}
+
+input[type=text] {
+    width: 15%;
+    margin-left: 5px;
+    border: 2px brown;
+    border-radius: 3px;
+    background-color: lightgrey;
+    color: rgb(90, 16, 139);
+}
+
+input[type=submit] {
+    background-color: rgb(0, 199, 0);
+    color: black;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(1, 146, 1);
+}
+
+.sign-up-form {
+    text-align: center;
+    padding: 5px;
+}

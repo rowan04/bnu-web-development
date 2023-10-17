@@ -3,40 +3,36 @@
 
     <head>
         <title>Web Development Glossary</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
 
-    <!--Add styling for the table-->
-    <style>
-        table {
-            font-family: Times New Roman;
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        td, th {
-            border: 1px solid black;
-            text-align: left;
-            padding: 5px;
-        }
-    </style>
-
     <body>
-        <h1>Web Development Glossary</h1>
+        <div id="top-div">
+            <br>
+            <center>
+                <h1>Web Development Glossary</h1>
+                <img src="images/Platypus_Original.png" alt="Platypus">
+                <h3>Welcome to Platypus' Web Developement Techy Terms Glossary!</h3>
+            </center>
+        </div>
 
-        <!--Adding a list for quick links-->
-        <p>Quick Access Links:</p>
-        <ul>
-            <li><a href="#CSS">CSS</a></li>
-            <li><a href="#DHTML">DHTML</a></li>
-            <li><a href="#DOM">DOM</a></li>
-            <li><a href="#HTML">HTML</a></li>
-            <li><a href="#Java">Java</a></li>
-            <li><a href="#JavaScript">JavaScript</a></li>
-            <li><a href="#TCP/IP">TCP/IP</a></li>
-            <li><a href="#URL">URL</a></li>
-            <li><a href="#XML">XML</a></li>
-        </ul>
-        <br>
+        <div id="list-div">
+            <br>
+            <!--Adding a list for quick links-->
+            <p>Quick Access Links:</p>
+            <ul>
+                <li><a href="#CSS">CSS</a></li>
+                <li><a href="#DHTML">DHTML</a></li>
+                <li><a href="#DOM">DOM</a></li>
+                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#Java">Java</a></li>
+                <li><a href="#JavaScript">JavaScript</a></li>
+                <li><a href="#TCP/IP">TCP/IP</a></li>
+                <li><a href="#URL">URL</a></li>
+                <li><a href="#XML">XML</a></li>
+            </ul>
+            <br>
+        </div>
 
         <!--Making the table of definitions-->
         <table>
@@ -209,20 +205,24 @@
                 <td>(Extensible Stylesheet Language) - Refers to a family of languages used to transform and render XML documents</td>
             </tr>
         </table>
-        <br>
-        <div>
-            <h2>Sign up to recieve half-hourly updates</h2>
-        </div>
-        <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-            <br><br>
-            <input type="submit" value="Submit to the spam...">
-        </form>
-        <br><br>
-        <img src="images/Platypus_Original.png" alt="Platypus">
+        <center>
+            <div id="sign-up-div">
+                <br>
+                <h3>Sign up to recieve half-hourly updates!</h3>
+                <form class="sign-up-form">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                    <br><br>
+                    <label for="checkbox">You accept that you will be spammed needlessly:</label>
+                    <input type="checkbox" id="checkbox" name="checkbox" required>
+                    <br><br>
+                    <input type="submit" value="Submit to the spam...">
+                </form>
+                <br><br>
+            </div>
+        </center>
     </body>
 </html>
