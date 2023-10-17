@@ -1,5 +1,6 @@
 body, p {
     font-family: Times New Roman;
+    /* background-image: url("../images/Platypus_Original.png"); */
 }
 
 p {
@@ -11,6 +12,24 @@ h1, h2, h3, h4, h5, h6 {
     word-spacing: 2px;
 }
 
+/* hyperlink styles */
+a:link {
+    color: blue;
+}
+
+a:active {
+    color: yellow;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+a:hover {
+    color: yellow;
+}
+
+/* div styles */
 div#top-div {
     background-color: white;
 }
@@ -23,6 +42,7 @@ div#sign-up-div {
     background-color: rgb(177, 236, 177);
 }
 
+/* table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -56,6 +76,7 @@ th {
     padding: 15px;
 }
 
+/* form styles */
 input[type=text] {
     width: 15%;
     margin-left: 5px;

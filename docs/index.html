@@ -16,9 +16,9 @@
             </center>
         </div>
 
+        <!--Adding a list for quick links-->
         <div id="list-div">
             <br>
-            <!--Adding a list for quick links-->
             <p>Quick Access Links:</p>
             <ul>
                 <li><a href="#CSS">CSS</a></li>
@@ -205,16 +205,30 @@
                 <td>(Extensible Stylesheet Language) - Refers to a family of languages used to transform and render XML documents</td>
             </tr>
         </table>
+
+        <!--Adding a form-->
         <center>
             <div id="sign-up-div">
                 <br>
-                <h3>Sign up to recieve half-hourly updates!</h3>
+                <h3>Sign up to receive half-hourly updates!</h3>
                 <form class="sign-up-form">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
                     <br><br>
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" required>
+                    <br><br>
+                    <label for="age">Select Age:</label>
+                    <select name="age" id="age" required>
+                        <option value="op0">Select</option>
+                        <option value="op1">0-1</option>
+                        <option value="op2">2-3</option>
+                        <option value="op3">4-98</option>
+                        <option value="op4">99+</option>
+                    </select>
+                    <br><br>
+                    <label for="wafflebox">Questions or Queries? Waffle here:</label>
+                    <textarea id="wafflebox" name="wafflebox" rows="3" cols="40" wrap="wrap"></textarea>
                     <br><br>
                     <label for="checkbox">You accept that you will be spammed needlessly:</label>
                     <input type="checkbox" id="checkbox" name="checkbox" required>
