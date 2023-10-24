@@ -34,12 +34,19 @@ div#top-div {
     background-color: white;
 }
 
-div#list-div {
-    background-color: rgb(243, 161, 131);
-}
-
 div#sign-up-div {
     background-color: rgb(177, 236, 177);
+}
+
+.navbutton{
+    background-color: burlywood;
+    border: 2px outset rgb(92, 75, 55);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 /* table styles */
