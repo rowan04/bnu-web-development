@@ -29,20 +29,21 @@ a:hover {
     color: yellow;
 }
 
-/* div styles */
-div#top-div {
+header {
     background-color: white;
+    margin: 15px;
+    margin-bottom: 20px;
 }
 
 div#sign-up-div {
     background-color: rgb(177, 236, 177);
 }
 
-.navbutton{
+.navbutton {
     background-color: burlywood;
-    border: 2px outset rgb(92, 75, 55);
-    color: white;
-    padding: 15px 32px;
+    margin: 3px 5px;
+    border: 4px outset rgb(156, 127, 93);
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -53,6 +54,7 @@ div#sign-up-div {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 td, th {
