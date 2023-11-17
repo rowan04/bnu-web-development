@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Hour time</title>
+
+    <script type="text/javascript">
+
+        function display_prompt() {
+            const time = prompt("What time is it to the nearest hour?")
+
+            if (time < 12) {
+                document.write("Good morning")
+            }
+            else if (time < 17) {
+                document.write("Good afternoon")
+            }
+            else if (time < 24) {
+                document.write("Good evening")
+            }
+            else {
+                document.write("Invalid time")
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" onclick="display_prompt()" value="Enter time:" />
+</body>
