@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Age vote</title>
+
+    <script type="text/javascript">
+
+        function display_prompt() {
+            const age = prompt("Enter your age:")
+
+            let result = age >= 18 ? "You are old enough to vote!" : "You aren't old enough to vote! (Fraud)";
+            document.write(result)
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" onclick="display_prompt()" value="Enter age:" />
+</body>
