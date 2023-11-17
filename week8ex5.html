@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Car objects</title>
+
+    <script type="text/javascript">
+
+    const cars = [];
+
+        function display_prompt() {
+            const cars = [{type:"VolksWagen", model:"Polo", color:"White"},
+                          {type:"Audi", model:"A5", color:"White"},
+                          {type:"Space X", model:"Falcon 9", color:"White"},
+                          {type:"Submarine", model:"Underwater version", color:"Yellow"},
+                          {type:"Yamaha", model:"Bike", color:"Red"}]
+
+            for (car of cars) {
+                display_object(car)
+            }
+        }
+
+        function display_object(object) {
+            if (object.color == "White") {
+                document.write("Not another white car!!!<br>")
+            }
+            else {
+                document.write("Object type: " + object.type + "<br>")
+                document.write("Object model: " + object.model + "<br>")
+                document.write("Object color: " + object.color + "<br>")
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" onclick="display_prompt()" value="Start" />
+</body>
