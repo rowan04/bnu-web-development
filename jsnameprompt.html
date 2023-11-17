@@ -7,26 +7,34 @@
 
     const names = [];
 
-        function activate() {
-            names[0] = prompt("Enter the first name:")
-            names[1] = prompt("Enter the second name:")
-            names[2] = prompt("Enter the third name:")
-
-            let count = 0;
+        function input() {
+            let count = 0
             while (count < 3) {
-                document.write("<p>Hello " + names[count] + ", there are " + names[count].length + " letters in your name.</p>")
+                names[count] = prompt("Enter name:")
                 count++
             }
-
-            window.setTimeout(sorting, 1500)
+            
+            output()
         }
 
-        function sorting() {
+        function output() {
+            for (name of names) {
+                document.write("<p>Hello " + name + ", there are " + name.length + " letters in your name.</p>")
+            }
+
             names.sort()
-            alert("Here is the list of names in alphabetical order:\n" + names[0] + "\n" + names[1] + "\n" + names[2])
+            document.write("Here is the list of names in alphabetical order:<br>")
+            for (name of names) {
+                document.write(name + "<br>")
+            }
+
+            document.write("<br>")
 
             names.reverse()
-            alert("Here is the list of names in reverse alphabetical order:\n" + names)
+            document.write("Here is the list of names in reverse alphabetical order:<br>")
+            for (name of names) {
+                document.write(name + "<br>")
+            }
         }
 
     </script>
@@ -36,6 +44,6 @@
 <body>
 
     <h1>JavaScript Name Prompt</h1>
-    <input type="button" onclick="activate()" value="Begin Program!" />
+    <input type="button" onclick="input()" value="Begin Program!" />
 
 </body>
