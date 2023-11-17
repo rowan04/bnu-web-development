@@ -1,17 +1,31 @@
 <html>
  <head>
   <script type="text/javascript">
-    function product(a,b)
-    {
-      return a*b
+    function product(a, b) {
+      return (a*b)
+    }
+
+    function divide(a, b) {
+      return (a/b)
+    }
+
+    function add(a, b) {
+      return (a+b)
+    }
+
+    function subtract(a, b) {
+      return (a-b)
     }
    </script>
 </head>
 
 <body>
   <script type="text/javascript">
-     var value1=prompt("Please enter first number here","first number")
-     var value2=prompt("Please enter second number here","second number")
-     document.write("The product of the two numbers you gave is " + product(value1,value2))
+     var value1=parseInt(prompt("Please enter first number here","first number"))
+     var value2=parseInt(prompt("Please enter second number here","second number"))
+     document.write("The sum of the two numbers you gave is " + add(value1,value2) + "<br>")
+     document.write("Subtracting the second number from the first gives you " + subtract(value1,value2) + "<br>")
+     document.write("The product of the two numbers you gave is " + product(value1,value2) + "<br>")
+     document.write("Dividing the second number from the first gives you " + divide(value1,value2) + "<br>")
   </script>
 </html>
