@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>What day</title>
+
+    <script type="text/javascript">
+        function display_prompt() {
+            let day;
+            let dayNumber = parseInt(prompt("Enter a number (1-7):"));
+            switch (dayNumber) {
+                case 1:
+                    day = "Monday";
+                    document.write("Today is " + day)
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    document.write("Today is " + day)
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    document.write("Today is " + day)
+                    break;
+                case 4:
+                    day = "Thursday";
+                    document.write("Today is " + day)
+                    break;
+                case 5:
+                    day = "Friday";
+                    document.write("Today is " + day)
+                    break;
+                case 6:
+                    day = "Saturday";
+                    document.write("Today is " + day)
+                    break;
+                case 7:
+                    day = "Sunday";
+                    document.write("Today is " + day)
+                    break;
+                default:
+                    document.write("Invalid input, " + dayNumber)
+                    break;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <input type="button" onclick="display_prompt()" value="Start" />
+</body>
