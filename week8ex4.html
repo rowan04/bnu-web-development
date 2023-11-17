@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Car array</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        const cars = ["McLaren", "Ferrari", "Aston Martin"]
+        let text = ""
+
+        for (let car of cars) {
+            text += car + "<br>"
+        }
+
+        document.getElementById("demo").innerHTML = text;
+
+        let continueLoop;
+
+        do {
+            let randomIndex = Math.floor(Math.random() * cars.length)
+            alert("Random car: " + cars[randomIndex])
+            continueLoop = confirm("Do you want to see another car?")
+        } while (continueLoop)
+    </script>
+
+</body>
+
+</html>
