@@ -1,6 +1,10 @@
 <html>
  <head>
   <script type="text/javascript">
+    function display_alert(text) {
+      alert(text)
+    }
+
     function product(a, b) {
       return (a*b)
     }
@@ -16,16 +20,47 @@
     function subtract(a, b) {
       return (a-b)
     }
+
+    function max(a, b) {
+      return Math.max(a, b)
+    }
+
+    function min(a, b) {
+      return Math.min(a, b)
+    }
+
+    function pow(a, b) {
+      return Math.pow(a, b)
+    }
+
    </script>
 </head>
 
 <body>
   <script type="text/javascript">
-     var value1=parseInt(prompt("Please enter first number here","first number"))
-     var value2=parseInt(prompt("Please enter second number here","second number"))
-     document.write("The sum of the two numbers you gave is " + add(value1,value2) + "<br>")
-     document.write("Subtracting the second number from the first gives you " + subtract(value1,value2) + "<br>")
-     document.write("The product of the two numbers you gave is " + product(value1,value2) + "<br>")
-     document.write("Dividing the second number from the first gives you " + divide(value1,value2) + "<br>")
+     var value1=parseInt(prompt("Please enter first number:"))
+     var value2=parseInt(prompt("Please enter second number:"))
+
+     document.write("The sum of the two given numbers is " + add(value1, value2) + "<br>")
+     display_alert("The sum of the two given numbers is " + add(value1, value2))
+
+     document.write("Subtracting the second number from the first gives you " + subtract(value1, value2) + "<br>")
+     display_alert("Subtracting the second number from the first gives you " + subtract(value1, value2))
+
+     document.write("The product of the two given numbers is " + product(value1, value2) + "<br>")
+     display_alert("The product of the two given numbers is " + product(value1, value2))
+
+     document.write("Dividing the second number from the first gives you " + divide(value1, value2) + "<br>")
+     display_alert("Dividing the second number from the first gives you " + divide(value1, value2))
+
+     document.write("The first number to the power of the second number is " + pow(value1, value2) + "<br>")
+     display_alert("The first number to the power of the second number is " + pow(value1, value2))
+
+     document.write("The larger of the two given numbers is " + max(value1, value2) + "<br>")
+     display_alert("The larger of the two given numbers is " + max(value1, value2))
+
+     document.write("The smaller of the two given numbers is " + min(value1, value2) + "<br>")
+     display_alert("The smaller of the two given numbers is " + min(value1, value2))
+
   </script>
 </html>
