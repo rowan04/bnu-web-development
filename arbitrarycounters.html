@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Arbitrary Counters</title>
+
+        <style>
+            .counter {
+            font-size: 16px;
+            margin-bottom: 10px;
+            }
+
+            button {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin: 0px 10px 30px 0px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            let counters = [];
+
+            function addCounter() {
+                const newCounter = {
+                    count: 0,
+                    id: counters.length + 1,
+                };
+                counters.push(newCounter);
+
+                const counterElement = document.createElement('div');
+                counterElement.innerHTML = `
+                    <p class="counter" id="counter${newCounter.id}">Counter ${newCounter.id}: ${newCounter.count}</p>
+                    <button onclick="increaseCounter(${newCounter.id - 1})">Increase Counter ${newCounter.id}</button>
+                `;
+                document.getElementById('countersContainer').appendChild(counterElement);
+            }
+
+            function increaseCounter(index) {
+                counters[index].count++;
+                document.getElementById(`counter${counters[index].id}`).innerText = `Counter ${counters[index].id}: ${counters[index].count}`;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="countersContainer">
+            <!-- Counters will be dynamically added here -->
+        </div>
+
+        <button onclick="addCounter()">Add Counter</button>
+    </body>
+</html>
