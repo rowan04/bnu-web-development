@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lexical Closure Example</title>
+    </head>
+
+    <body>
+        <div id="result">
+            <script>
+                function createDoubler() {
+                    let result = 1; // Initial value
+                
+                    return function() {
+                        return result *= 2; // Double the previous result
+                    };
+                }
+ 
+                // Create a closure by calling createDoubler and storing the returned function
+                let closure = createDoubler();
+                
+                // Execute the closure multiple times and display the results
+                console.log(closure()); // Output: 2
+                console.log(closure()); // Output: 4
+                console.log(closure()); // Output: 8
+                
+                // Display the result in the HTML = 16
+                document.getElementById('result').innerText = closure();
+            </script>
+        </div>
+    </body>
+</html>
