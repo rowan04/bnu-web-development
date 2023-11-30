@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <title>JavaScript Objects</title>
+    </head>
+
+    <body class="vsc-initialized">
+        <script language="JavaScript" type="text/JavaScript">
+            var line = { 
+                xorigin: 10, 
+                yorigin: 15, 
+                xend: 100, 
+                yend: 100 
+            }
+            var person = { 
+                firstName: "Fred", 
+                lastName: "Smith",
+                age: 28, 
+                married: true, 
+                telephone: 234656 
+            }
+
+            document.write("<br/>PERSON DETAILS:<br/>" + person.firstName + "<br/>" + person.lastName + "<br/>" + person.age+"<br/>" + person.married + "<br/>" + person.telephone + "<br/>");
+            document.write("<br/>GRAPHIC DETAILS:<br/>x origin ", line.xorigin, "<br/>y origin ", line.yorigin, "<br/>x end ", line.xend, "<br/>y end ", line.yend);
+        </script>
+
+    </body>
+</html>

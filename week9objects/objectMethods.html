@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JavaScript Objects</title>
+
+<script type="text/javascript">
+//Here the person function is used to imitate an OO "Person" class
+    function person(nm1, nm2, age, lgth, col)
+    {
+		//Properties here ...
+		this.firstName = nm1;
+		this.lastName = nm2;
+		this.age = age;
+
+		//Reference to new object and object properties
+		this.hair = new Object;
+		this.hair.length = lgth;
+		this.hair.colour = col;
+
+		//Call to methods here - note methods are referenced by a 'variable'
+		this.getPersonDetails = showDetails
+		this.setAge = changeAge
+
+		//Functions are referenced by variable-like aliases e.g. person.getPersonDetails() calls showDetails
+		function showDetails()
+		{
+			window.document.write(this.firstName+"<br/>"+this.lastName+"<br/>"+this.age+"<br/>");
+			document.write(this.hair.length+"<br/>"+this.hair.colour+"<br/><br/>");
+		}
+		//The showDetails() and changeAge() function operate identically even if placed
+		//outside the person( ... ) {... } block of script
+		function changeAge(age)
+		{
+			this.age=age;
+		}
+	} // end person "class"
+
+</script>
+
+<body class="vsc-initialized">
+<script language="JavaScript" type="text/JavaScript">
+
+var student80765432 = new person("Fred", "Smith", 28, "long", "red");
+student80765432.getPersonDetails();
+student80765432.setAge(48);
+student80765432.getPersonDetails();
+
+</script>Fred<br>Smith<br>28<br>long<br>red<br><br>Fred<br>Smith<br>48<br>long<br>red<br><br>
+
+</body></html>

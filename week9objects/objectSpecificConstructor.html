@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>JavaScript Objects</title>
+
+
+		<script type="text/javascript">
+			function person(nm1, nm2, age, lgth, col) {
+				this.firstName = nm1;
+				this.lastName = nm2;
+				this.age = age;
+
+				this.hair = new Object;
+				this.hair.length = lgth;
+				this.hair.colour = col;
+			}
+		</script>
+
+	</head>
+
+	<body class="vsc-initialized">
+
+		<script language="JavaScript" type="text/JavaScript">
+			var student80765432 = new person("Fred", "Smith", 28, "long", "red");
+			document.write(student80765432.firstName+"<br/>"+student80765432.lastName+"<br/>"+student80765432.age+"<br/>");
+			document.write(student80765432.hair.length+"<br/>"+student80765432.hair.colour);
+		</script>
+
+	</body>
+</html>

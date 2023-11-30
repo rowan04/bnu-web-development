@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript Objects</title>
+    </head>
+
+    <body class="vsc-initialized">
+
+    <script language="JavaScript" type="text/JavaScript">
+        var person = new Object();
+
+        person.firstName = "Fred";
+        person.lastName = "Smith";
+        person.age = 28;
+
+        person.hair = new Object();
+
+        person.hair.length = "long";
+        person.hair.colour = "red";
+
+        document.write(person.firstName + "<br/>" + person.lastName + "<br/>" + person.age + "<br/>");
+        document.write(person.hair.length + "<br/>" + person.hair.colour);
+    </script>
+
+    </body>
+</html>
