@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Books</title>
+
+        <script type="text/javascript">
+            class Book {
+                constructor(author, pub_date, title, img) {
+                    this.author = author;
+                    this.pub_date = pub_date;
+                    this.title = title;
+                    this.img = img;
+                }
+
+                getDetails() {
+                    document.write("<tr><td>"+this.author+"</td><td>"+this.pub_date+"</td><td>"+this.title+"</td><td><img src=bookimgs/"+this.img+"></td></tr>")
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            let books = []
+
+            let book1 = new Book("Fred Smith", 2009, "Great JavaScripts", "fredSmith.JPG")
+            books.push(book1)
+            let book2 = new Book("James Andy", 2006, "Simple JavaScripts", "jamesAndy.JPG")
+            books.push(book2)
+            let book3 = new Book("Susan Meek", 2008, "101 JavaScripts", "susanMeek.JPG")
+            books.push(book3)
+            let book4 = new Book("Nigella Lawson", 2004, "JavaScripts Recipe", "nigellaLawson.JPG")
+            books.push(book4)
+            let book5 = new Book("Bob Pirsig", 1984, "Zen Scripting", "bobPirsig.JPG")
+            books.push(book5)
+            let book6 = new Book("Daphne DM", 2009, "Romantic Cornish Scripts", "daphneDM.JPG")
+            books.push(book6)
+        </script>
+
+        <table>
+            <tr>
+                <th>Author</th>
+                <th>Date Published</th>
+                <th>Title</th>
+                <th>Image</th>
+            </tr>
+            <script>
+                for (let book of books) {
+                    book.getDetails()
+                }
+            </script>
+        </table>
+    </body>
+</html>
