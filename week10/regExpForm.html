@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>JavaScript - Validating with Regular Expressions</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript - Validating with Regular Expressions</title>
 
-	<script language="JavaScript" type="text/JavaScript">
-		function processForm() {
-			var myform = document.getinfo;
-			var check=myform.email.value;
-			document.write(testEmail(check));
-		}
+        <script language="JavaScript" type="text/JavaScript">
+            function processForm(myform) {
+                let check = myform.email.value;
+                document.write(testEmail(check));
+            }
 
-		function testEmail(chkMail){
-			var emailPattern ="^[\\w-_\.]*[\\w-\.]\@[\\w]\.+[\\w]+[\\w]$";
-			var regex = new RegExp(emailPattern);
-			return regex.test(chkMail);
-		}
-	</script>
-</head>
+            function testEmail(chkMail){
+                const emailPattern ="^[\\w-_\.]*[\\w-\.]\@[\\w]\.+[\\w]+[\\w]$";
+                let regex = new RegExp(emailPattern);
+                return regex.test(chkMail);
+            }
+        </script>
+    </head>
 
-<body class="vsc-initialized">
-	<form method="post" name="getinfo" onsubmit="return processForm()">
-		<input type="text " name="email"><br>
-		<input type="submit" value="Check This Email Address" name="checkit">
-	</form>
-
-</body>
+    <body class="vsc-initialized">
+        <form method="post" name="getinfo" onsubmit="return processForm(this)">
+            <input type="text " name="email"><br>
+            <input type="submit" value="Check This Email Address" name="checkit">
+        </form>
+    </body>
 </html>

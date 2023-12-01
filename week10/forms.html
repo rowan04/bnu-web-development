@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JavaScript - the DOM and Forms</title>
-<script language="JavaScript" type="text/JavaScript">
-	function processForm(){
-		myForm = document.userDetails;
-		alert("Hello, "+myForm.fname.value+" "+ myForm.lname.value);
-		document.write("Hello, "+myForm.fname.value+" "+ myForm.lname.value);
-		}
-</script>
-</head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript - the DOM and Forms</title>
+        <script language="JavaScript" type="text/JavaScript">
+            function processForm(){
+                myForm = document.userDetails;
+                alert("Hello, "+myForm.fname.value+" "+ myForm.lname.value);
+                document.write("Hello, "+myForm.fname.value+" "+ myForm.lname.value);
+            }
+        </script>
+    </head>
 
-<body class="vsc-initialized">
-	<form name="userDetails" onsubmit="processForm()">
-		<input type="text " name="fname"><br>
-		<input type="text " name="lname"><br>
-		<input type="submit" name="submit">
-	</form> 
-</body>
+    <body class="vsc-initialized">
+        <form name="userDetails" onsubmit="processForm()">
+            <input type="text " name="fname"><br>
+            <input type="text " name="lname"><br>
+            <input type="submit" name="submit">
+        </form> 
+    </body>
 </html>
