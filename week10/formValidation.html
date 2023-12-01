@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JavaScript - Form Validation - Password</title>
+	<script language="JavaScript" type="text/JavaScript">
+		function processForm() {
+			var myForm = document.logon;
+
+			if (myForm.password.value === "letmein") {
+				return true;
+			}
+			
+			alert("Wrong password!");
+			myForm.password.focus();
+
+			return false;
+		}
+	</script>
+</head>
+
+<body class="vsc-initialized">
+	<!--
+		Method "GET" will put form value into query parameters, visible to the user 
+		Change method to "POST" to hide the values 
+	-->
+	<form method="GET" action="./secretArea.html" enctype="text/plain" name="logon" onsubmit="return processForm()">
+		<input type="password" name="password"><br>
+		<input type="submit" value="log in" name="Login">
+	</form>
+
+	<!-- Add a container for the result message -->
+	<div id="resultMessage"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <script type="text/javascript">
+    function validate() 
+    {
+        //alert("Validate has been activated");
+        var ans1, ans2;
+        var a = document.getElementsByName('choice1');
+        var b = document.getElementsByName('choice2');
+        //Check Answer 1 is "a scripting language"
+        if (a[0].checked && a[0].value == "a scripting language")
+            {
+                    ans1 = "your answer to Q1 is correct";
+            }
+        else
+            {
+                    ans1 = "your answer to Q1 is INCORRECT - try harder!!!";
+            }
+        //Check Answer 2 is "Biden"
+        if (b[3].checked && b[3].value == "Biden")
+            {
+                    ans2 = "your answer to Q2 is correct";
+            }
+        else
+            {
+                    ans2 = "your answer to Q2 is INCORRECT - try harder!!!";
+            }
+    
+        alert(ans1 + "\n" + ans2);	
+    
+    }   
+    </script>
+    </head>
+    
+    <body class="vsc-initialized">
+    <h2>JavaScript is ______ .</h2><br>
+    <form>
+        <input type="radio" name="choice1" value="a scripting language"> a scripting language
+        <input type="radio" name="choice1" value="the same as Java"> the same as Java
+        <input type="radio" name="choice1" value="a web application"> a web application
+        <input type="radio" name="choice1" value="none of These"> none of These
+        <p>
+    </p><h2> ______ is president of the USA</h2><br>
+        <input type="radio" name="choice2" value="Fred"> Fred
+        <input type="radio" name="choice2" value="Teresa"> Teresa
+        <input type="radio" name="choice2" value="Janet"> Janet
+        <input type="radio" name="choice2" value="Biden"> Biden
+        <p>
+        <input type="submit" value="submit" onclick="validate()">
+    </p></form>
+    </body></html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>JavaScript - Enumerated Forms</title>
+	<script language="JavaScript" type="text/JavaScript">
+		function processForm() {
+			firstName = document.forms[0].elements[0].value;
+			lastName = document.forms[0].elements[1].value;
+			alert("Hello, "+firstName+" "+ lastName)
+			document.write("Hello, "+firstName+" "+ lastName);  
+		}
+	</script>
+</head>
+
+<body class="vsc-initialized">
+	<form name="userDetails" onsubmit="processForm()">
+		<input type="text " name="fname"><br>
+		<input type="text " name="lname"><br>
+		<input type="submit" name="submit">
+	</form> 
+</body>
+</html>
