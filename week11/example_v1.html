@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <title>Test</title> 
+        <style type="text/css">
+            h2 {background-color: lightblue; width: 100%}
+            a {font-size: larger; background-color: goldenrod}
+            a:hover {background-color: gold}
+            #example1 {display: none; margin: 3%; padding: 4%; background-color: limegreen}
+        </style>
+        <script type="text/javascript">
+            function changeDisplayState (id) {
+                // d is a reference to the showhide div (strictly speaking, the anchor) with the "Show example" label
+                const d = document.getElementById("showhide");
+                // e is a reference to the example1 div with the "This is the example ..." text 
+                const e = document.getElementById(id);
+                //the display property is set to s string of 'none' or empty display the <div id='example1' ...> and set the display property to 'block'
+                if (e.style.display == 'block') {
+                    e.style.display = 'none';
+                    d.innerHTML = 'Show example';
+                } else {
+                    e.style.display = 'block';
+                    d.innerHTML = 'Hide example..............';
+                }
+        }
+        </script>
+    </head>
+    <body class="vsc-initialized">
+        <h2>How to use a DOM function</h2>
+        <div><a id="showhide" href="javascript:changeDisplayState('example1')">Show example</a></div>
+        <div id="example1">
+            This is the example.
+            (Additional information, which is only displayed on request)...
+        </div>
+        <div>The general text continues ...</div>
+    </body>
+</html>

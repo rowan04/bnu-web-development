@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <title>!ALERT! - after Moseley, 2007 </title>
+    </head>
+    <body>
+        <!-- div is given an identifier "urgent" which can be used as a handle by JavaScript-->
+        <div id="urgent" style="background-color: red; color: yellow"><h1>The Web server is under attack!</h1></div>
+
+        <script type="text/javascript">
+            //Create an array of colours
+            const colours = new Array("yellow", "orange", "red")
+            //use the DOM to create a reference to the "urgent" <div>
+            const urgent = document.getElementById("urgent");
+            //declare a counter to loop through the array and initialise at zero
+            let nextColour = 0;
+            //[1] setIntervalcalls a function or evaluates an expression at preset intervals in milliseconds
+            //[2] syntax is "setInterval(code,milliseconds)" (optional 3rd parameter of scripting language)
+            //[3] here the style sheet for <div id="urgent"> bg colour is changed by incrementing the colours[] array
+            //[4] clever bit of script ... use the %(modulus) takes the remainder after dividing nextColour
+            //        by colors.length, therefore ensures colours[x] is never > the number of array elements
+            setInterval("urgent.style.backgroundColor=colours[nextColour++%colours.length]; ", 250);
+            setInterval("urgent.style.color=colours[nextColour++%colours.length]; ", 250);
+        </script>
+
+    </body>
+</html>

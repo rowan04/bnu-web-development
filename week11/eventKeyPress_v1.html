@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Events - Key Actions - adapted from Moseley, 2007 </title>
+		<script type="text/javascript">
+			function processKey(key) {
+				if (key == 113) {
+					alert("You pressed the q key");
+				} else {
+					alert("You pressed key number " + key);
+				}
+			}
+		</script>
+	</head>
+
+	<body onkeypress="processKey(window.event.keyCode)">
+		<h1>Press a key!</h1>
+	</body>
+</html>

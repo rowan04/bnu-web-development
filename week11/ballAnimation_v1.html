@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+		<title>Ball Animation - adapted from Moseley, 2007 </title>
+		<script type="text/javascript">
+			function ball(bx, by, bxdir, bydir, bid) {
+				this.xpos = bx;
+				this.ypos = by;
+				this.xdirn = bxdir;
+				this.ydirn = bydir;
+				nam = "ball" + bid;
+				s ='<div id=ball' + bid + ' style="left: 100px; position: absolute; top: 100px"><img src="images/ball.gif" border=0></div>';
+				document.writeln(s);
+
+				this.gr=document.getElementById(nam).style;
+				this.setball = setball;
+				this.moveball = moveball;
+			}
+
+			function setball(bx, by) {
+				this.xpos = bx;
+				this.ypos = by;
+				this.gr.left = bx;
+				this.gr.top = by;
+			}
+
+			function moveball() {
+				this.ypos += this.ydirn;
+				if (this.ypos > ymax) {
+					this.ydirn =- this.ydirn;
+				} else if (this.ypos < 10) {
+					this.ydirn = Math.abs(this.ydirn);
+				}
+
+				this.xpos += this.xdirn;
+				if (this.xpos > xmax) {
+					this.xdirn =- this.xdirn;
+				} else if (this.xpos < 10) {
+					this.xdirn = Math.abs(this.xdirn);
+				}
+
+				this.setball(this.xpos, this.ypos);
+			}
+
+			function onMove() {
+				for (j=1; j<=numballs; j++) {
+					aball[j].moveball();
+				}
+				setTimeout("onMove()", 1);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="test2" style="left: 140px; position: absolute; top: 110px"></div>
+		<script type="text/javascript">
+			const numballs=10;
+			let aball = new Array();
+			for (j=1; j<=numballs; j++) {
+				let xdirRange = (Math.random()*8) - 4;
+				let ydirRange = (Math.random()*8) - 4;
+				aball[j] = new ball(12 + (Math.random() * 400), 13 + (Math.random() * 400), xdirRange, ydirRange, j);
+			}
+
+			const xmax = document.body.clientWidth-30;
+			const ymax = document.body.clientHeight-30;
+			window.onload = onMove;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Events - onmousemove - adapted from Moseley, 2007 </title>
+		<script language="javascript">
+			function onMove(e) {
+				const ex = e.pageX;
+				const ey = e.pageY;
+				gr.left = ex + "px";
+				gr.top = ey + "px";
+			}
+
+			//Connects the mouse movement event to calling a function to move the image
+			function setup() {
+				document.captureEvents(Event.MOUSEMOVE);
+				window.document.onmousemove = onMove;
+			}
+		</script>
+	</head>
+	<body>
+		<!-- Place the image in a <div> with name "ballpic" so it can be referenced later using getElementById() -->
+		<div id="ballpic" style="position: absolute; top: 340px; left: 769px;">
+			<img src="./images/ball.gif">
+		</div>
+
+		<script type="text/javascript">
+			//"Browser - sniffing here" - IE is only set to "true" if document.all (specific to IE) is available
+			const IE = document.all ? true: false;
+			//"gr" (abbr. for "graphic") is set to reference the ballpic <div> style, thereby provide a handle to alter its x/y position
+			let gr = document.getElementById("ballpic").style;
+			//calls setup() function
+			window.onload = setup;
+		</script>
+	</body>
+</html>

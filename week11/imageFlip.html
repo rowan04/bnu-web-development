@@ -1,0 +1,17 @@
+<html> 
+    <head> 
+        <title>Image Flip - adapted from Moseley, 2007 </title>
+    </head>
+    <body>
+        <div align="center">
+            <!-- The image tag includes attributes for source, name, alternative text, width/height (in px or %) -->
+            <img src="images/smile1.PNG" name="smileys" alt="smiley image" width="231" height="233">
+            <form>
+                <!-- The onclick events use the DOM to reference the image but dynamically change the "src" -->
+                <!-- Remember we can also reference images by enumerating the DOM image array -->
+                <input type="button" name="smile1.PNG" value="Happy Smiley" onClick="document.smileys.src='images/smile1.PNG'; document.smileys.alt='happy smiley'">
+                <input type="button" name="smile5.PNG" value="Unhappy Smiley" onClick="document.smileys.src='images/smile5.PNG'; document.smileys.alt='sad smiley'">
+            </form>
+        </div>
+    </body>
+</html>

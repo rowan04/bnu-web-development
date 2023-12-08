@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Image Animation - adapted from Moseley, 2007 </title>
+		<script type="text/javascript">
+			let smiles = new Array(10)
+			let frame = 0;
+			let timeout_state = null; 
+
+			//Preloads image into the browser cache ready for use
+			function imageLoad() {
+				for(i=0; i<=9; i++) {
+					smiles[i] = new Image();
+					smiles[i].src = "images/smile" + i + ".PNG";
+				}
+			}
+
+			function animate() {
+				document.animImage.src = smiles[frame].src;
+				frame++;
+				if (frame > 9) {
+					frame = 0;
+				}
+				//Recursive call to the animate function...
+				timerId = setTimeout("animate()", document.animateform.speed.value);
+			}
+
+			function checkButton(runAnim) {
+				if (runAnim.value == "Start") {
+					runAnim.value = "Stop";
+					animate();
+				} else {
+					runAnim.value = "Start";
+					clearTimeout(timerId);
+					timerId = null;
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="imageLoad()"><h1>Smiley Animation</h1>
+		<p>
+			<img src="./images/smile0.PNG" name="animImage" alt="smileys" width="231" height="233">
+		</p>
+		<form name="animateform">
+			<!-- The onclick events use the DOM to reference the image but dynamically change the "src" -->
+			<!-- Remember we can also reference images by enumerating the DOM image array -->
+			<input type="button" value="Start" name="runAnim" onclick="checkButton(this)">
+			<input type="text" name="speed" value="250">milliseconds
+		</form>
+
+	<script type="text/javascript">
+			// Sets the values of the fields on the runAnim form using the DOM
+			document.animateform.runAnim.value = "Start";
+			document.animateform.speed.value = 250;
+	</script>
+
+	</body>
+</html>
