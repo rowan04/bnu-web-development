@@ -35,6 +35,11 @@
 					timerId = null;
 				}
 			}
+
+			function callstop() {
+				clearTimeout(timerId);
+				timerId = null;
+			}
 		</script>
 	</head>
 
@@ -47,6 +52,7 @@
 			<!-- Remember we can also reference images by enumerating the DOM image array -->
 			<input type="button" value="Start" name="runAnim" onclick="checkButton(this)">
 			<input type="text" name="speed" value="250">milliseconds
+			<p><a onclick="callstop()" href="#">&lt;&lt;STOP&gt;&gt;</a></p>
 		</form>
 
 	<script type="text/javascript">
