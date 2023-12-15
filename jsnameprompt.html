@@ -1,49 +1,14 @@
 <html>
+    <head>
+        <title>JavaScript Name Prompt</title>
+        <script src="jsnameprompt.js"></script>
+        <script type="text/javascript">
+            const names = [];
+        </script>
+    </head>
 
-<head>
-    <title>JavaScript Name Prompt</title>
-
-    <script type="text/javascript">
-
-    const names = [];
-
-        function input() {
-            let count = 0
-            while (count < 3) {
-                names[count] = prompt("Enter name:")
-                count++
-            }
-            
-            output()
-        }
-
-        function output() {
-            for (name of names) {
-                document.write("<p>Hello " + name + ", there are " + name.length + " letters in your name.</p>")
-            }
-
-            names.sort()
-            document.write("Here is the list of names in alphabetical order:<br>")
-            for (name of names) {
-                document.write(name + "<br>")
-            }
-
-            document.write("<br>")
-
-            names.reverse()
-            document.write("Here is the list of names in reverse alphabetical order:<br>")
-            for (name of names) {
-                document.write(name + "<br>")
-            }
-        }
-
-    </script>
-
-</head>
-
-<body>
-
-    <h1>JavaScript Name Prompt</h1>
-    <input type="button" onclick="input()" value="Begin Program!" />
-
-</body>
+    <body>
+        <h1>JavaScript Name Prompt</h1>
+        <input type="button" onclick="input(names)" value="Begin Program!" />
+    </body>
+</html>

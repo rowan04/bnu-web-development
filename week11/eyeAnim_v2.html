@@ -1,126 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Eyes</title>
-    <!-- DOESN'T WORK!!! AI NOT TOO SMART -->
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Eyes</title>
+        <!-- DOESN'T WORK!!! AI NOT TOO SMART -->
+        <script src="eyeAnim_v2.js"></script>
+        <link rel="stylesheet" href="eyeAnim_v2.css" type="text/css">
+    </head>
 
-        .eye-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 104px;
-            height: 52px;
-        }
+    <body>
+        <div class="eye-container" id="eyeContainer">
+            <div class="eye" id="eye1"></div>
+            <div class="eye" id="eye2" style="left: 54px;"></div>
+        </div>
+        <div class="pupil" id="pupil1"></div>
+        <div class="pupil" id="pupil2" style="left: 54px;"></div>
+        <div class="white"></div>
 
-        .eye {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            border: 1px solid #000000;
-            box-shadow: inset -16px -16px 25px -5px rgba(0, 0, 0, 0.16);
-        }
-
-        .pupil {
-            position: absolute;
-            width: 42px;
-            height: 42px;
-            background-color: #000000;
-            border-radius: 50%;
-        }
-
-        .white {
-            position: absolute;
-            top: 16%;
-            left: 16%;
-            width: 20%;
-            height: 20%;
-            background: #ffffff;
-            border-radius: 50%;
-            transform: skewX(-15deg) skewY(-18deg);
-        }
-    </style>
-</head>
-<body>
-    <div class="eye-container" id="eyeContainer">
-        <div class="eye" id="eye1"></div>
-        <div class="eye" id="eye2" style="left: 54px;"></div>
-    </div>
-    <div class="pupil" id="pupil1"></div>
-    <div class="pupil" id="pupil2" style="left: 54px;"></div>
-    <div class="white"></div>
-
-    <script>
-        (function () {
-            var eyeSize = 50;
-            var pupilSize = 42;
-
-            var eyeContainer = document.getElementById('eyeContainer');
-            var eyes = document.querySelectorAll('.eye');
-            var pupils = document.querySelectorAll('.pupil');
-            var white = document.querySelector('.white');
-
-            function init() {
-                window.addEventListener('resize', handleResize);
-                window.addEventListener('mousemove', handleMouseMove);
-                window.addEventListener('scroll', handleScroll);
-
-                handleResize();
-                draw();
-            }
-
-            function handleResize() {
-                eyeContainer.style.width = (eyeSize * 2) + 'px';
-                eyeContainer.style.height = eyeSize + 'px';
-            }
-
-            function handleMouseMove(event) {
-                var mouseX = event.pageX - window.pageXOffset;
-                var mouseY = event.pageY - window.pageYOffset;
-
-                moveEyes(mouseX, mouseY);
-            }
-
-            function handleScroll() {
-                var scrollTop = window.pageYOffset;
-                var scrollLeft = window.pageXOffset;
-
-                eyeContainer.style.top = scrollTop + 'px';
-                eyeContainer.style.left = scrollLeft + 'px';
-            }
-
-            function moveEyes(mouseX, mouseY) {
-                var eyeCenterY = eyeContainer.offsetTop + eyeSize / 2;
-                var eyeCenterX = eyeContainer.offsetLeft + eyeSize / 2;
-
-                var deltaX = mouseX - eyeCenterX;
-                var deltaY = mouseY - eyeCenterY;
-
-                var angle = Math.atan2(deltaY, deltaX);
-                var distance = Math.min(eyeSize / 2, Math.sqrt(deltaX ** 2 + deltaY ** 2));
-
-                pupils.forEach(function (pupil) {
-                    pupil.style.top = (eyeSize / 2 - pupilSize / 2 + distance * Math.sin(angle)) + 'px';
-                    pupil.style.left = (eyeSize / 2 - pupilSize / 2 + distance * Math.cos(angle)) + 'px';
-                });
-            }
-
-            function draw() {
-                // Additional animations or updates can be added here
-                requestAnimationFrame(draw);
-            }
-
-            window.addEventListener('load', init);
-        })();
-    </script>
-</body>
+        <script>main()</script>
+    </body>
 </html>
