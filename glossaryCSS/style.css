@@ -35,8 +35,57 @@ header {
     margin-bottom: 20px;
 }
 
+footer {
+    background-color: burlywood;
+    height: 230px;
+}
+
+.footerimg {
+    margin: 50px 150px;
+    float:left;
+    background-color: burlywood;
+}
+
+p#floatright {
+    margin: 20px 100px;
+    text-align: right;
+    float: right;
+    background-color: burlywood;
+}
+
 div#sign-up-div {
+    padding: 25px 5px;
     background-color: rgb(177, 236, 177);
+}
+
+div#floats-right {
+    float: right;
+    margin: 5px 10px;
+    text-align: right;
+    width: 100px;
+}
+
+.boat {
+    margin-top: 20px;
+    height: 235px;
+    width: 265px;
+    z-index: 0;
+    position: relative;
+    left: 65px;
+}
+
+p.above {
+    position: relative;
+    bottom: 130px;
+    z-index: 1;
+    color: lime;
+    font-weight: bold;
+    font-size: larger;
+}
+
+div#clears {
+    clear: both;
+    color: purple;
 }
 
 .navbutton {
@@ -113,4 +162,8 @@ input[type=submit]:hover {
 .sign-up-form {
     text-align: center;
     padding: 5px;
+}
+
+.italic {
+    font-style: italic;
 }
